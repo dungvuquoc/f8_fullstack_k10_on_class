@@ -1,0 +1,14 @@
+.box {
+  width: 500px;
+  /* height: 300px; */
+  border: 1px solid red;
+  overflow: auto;
+  padding: 10px;
+}
+.box img {
+  float: left;
+  margin-right: 10px;
+}
+.box p {
+  margin: 0;
+}

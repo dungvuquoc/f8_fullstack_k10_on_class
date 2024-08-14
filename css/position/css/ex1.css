@@ -1,0 +1,39 @@
+ul {
+  list-style: none;
+}
+ul li {
+  margin-bottom: 10px;
+}
+ul li label {
+  position: relative;
+  user-select: none;
+}
+ul li label span::before {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  border: 2px solid green;
+  background-color: white;
+  margin-right: 5px;
+  box-sizing: border-box;
+}
+ul li label span::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 10px;
+  border: 3px solid #fff;
+  border-width: 0px 3px 3px 0px;
+  position: absolute;
+  top: -3px;
+  left: 6px;
+  transform: rotate(45deg);
+  display: none;
+}
+ul li input[type="checkbox"]:checked + span::before {
+  background-color: green;
+}
+ul li input[type="checkbox"]:checked + span::after {
+  display: inline-block;
+}

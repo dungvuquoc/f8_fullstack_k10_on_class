@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 1px solid #ccc;
+}
+.box {
+  width: 500px;
+  height: 500px;
+  margin: 50px auto;
+  position: relative;
+}
+.circle_1 {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@keyframes move {
+  100% {
+    rotate: 360deg;
+  }
+}
+.line_1 {
+  /* animation: move 2s infinite linear; */
+}

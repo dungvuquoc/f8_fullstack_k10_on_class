@@ -1,0 +1,25 @@
+/* 
+Thuộc tính color là thuộc tính kế thừa 
+
+*/
+@font-face {
+  font-family: "SVN fontbox";
+  src: url("../font/SVN-Fontbox-Boathouse-Filled.otf")
+}
+body {
+  font-size: 16px;
+  /* font-family: "SVN fontbox", serif; */
+  font-family: Arial, Helvetica, sans-serif;
+}
+p {
+  color: red;
+  font-size: 32px;
+  line-height: 1.5;
+  font-style: italic;
+  -webkit-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(0deg, 0deg);
+  text-transform: capitalize;
+  text-decoration: underline;
+  text-align-last: center;
+  word-break: break-all;
+  
+}

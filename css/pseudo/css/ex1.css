@@ -1,0 +1,8 @@
+input[id="green"]:checked ~ p,
+input[id="green"]:checked ~ label[for="green"] {
+  color: green;
+}
+input[id="red"]:checked ~ p,
+input[id="red"]:checked ~ label[for="red"] {
+  color: red;
+}

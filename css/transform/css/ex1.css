@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 1px solid #ccc;
+}
+.box {
+  width: 800px;
+  height: 400px;
+  margin: 50px auto;
+}
+/* h2 {
+  transition-property: padding-left;
+  transition-duration: 1s;
+  transition-delay: 1s;
+  transition-timing-function: ease-in-out;
+}
+.box:hover h2 {
+  padding-left: 50px;
+} */
+/* button {
+  display: block;
+  margin: 0 auto;
+  padding: 15px 30px;
+  color: #fff;
+  border-radius: 99px;
+  background-color: green;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+button span {
+  position: relative;
+  border: none;
+  font-size: 16px;
+}
+button::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: red;
+  transition: width 0.3s ease;
+}
+button:hover::before {
+  width: 100%;
+} */
+/* label {
+  display: block;
+  margin: 0 auto;
+  padding: 15px 30px;
+  width: 150px;
+  height: 50px;
+  color: #fff;
+  border-radius: 99px;
+  background-color: gray;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+label::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  background-color: green;
+  transition: opacity 0.3s ease;
+}
+label div {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: left 0.3s ease;
+}
+input[type="checkbox"]:checked + label::before {
+  opacity: 1;
+}
+input[type="checkbox"]:checked + label div {
+  left: calc(100% - 46px - 2px);
+} */
+h2 {
+  margin-top: 100px;
+  position: relative;
+  color: red;
+  background-color: white;
+}
+h2 span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  color: green;
+  background-color: white;
+  transition: height 0.3s ease;
+  overflow: hidden;
+}
+h2:hover > span {
+  height: 0;
+}
