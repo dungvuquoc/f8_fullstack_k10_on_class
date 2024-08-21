@@ -1,0 +1,130 @@
+//luu y gia tri cua bieu thuc so sanh se la true hoac false
+// $a: 5;
+// $b: $a >= 5;
+// .box {
+//   color: $b;
+// }
+//cau lenh re nhanh
+// $number: 10;
+// .box {
+//   @if ($number >= 10) {
+//     width: 50%;
+//   } @else {
+//     color: red;
+//   }
+// }
+//Example: Xay dung 1 mixin dung de the hien vi tri cua 1 phan tu
+//tl --> top left
+//tr --> top right
+//bl --> bottom left
+//br --> bottom right
+// @mixin position($type, $x, $y) {
+//   position: absolute;
+//   @if ($type == "tl") {
+//     top: $x;
+//     left: $y;
+//   } @else if ($type == "tr") {
+//     top: $x;
+//     right: $y;
+//   } @else if ($type == "bl") {
+//     bottom: $x;
+//     left: $y;
+//   } @else if ($type == "br") {
+//     bottom: $x;
+//     right: $y;
+//   } @else {
+//     inset: 0;
+//   }
+// }
+// $value: 11;
+// $status: true;
+// // .box {
+//   @if ($value % 2 == 0) {
+//     .box {
+//     @include position("tl", 20px, 30px);
+//     }
+//   } @else {                                  
+//     .box {
+//     @include position("tr", 20px, 30px);
+//     }
+//   }
+// // }
+// .box-2 {
+//   @if (not(not($status))) {
+//     @include position("tr", 10px, 20px);
+//   }
+// }
+
+//vong lap for cu phap cho phep chuong trinh lap di lap lai theo mot so lan nhat dinh
+// $length: 5;
+// @for $i from 1 to $length + 1 {
+//   .column-#{$i} {
+//     width: $i * 5%;
+//   }
+// }
+
+//vong lap each
+// $sizes: 20px 40px 60px 80px; //list
+// $length: length($sizes);
+// $temp: 0;
+// @each $size in $sizes {
+//   $temp: $temp + 1;
+//   @if ($temp == $length ) {
+//     .column-#{$size} {
+//       font-size: 0;
+//     }
+//   } @else {
+//     .column-#{$size} {
+//       font-size: $size;
+//     }
+//   }
+// }
+
+//th2
+// $sizes: (small 40px normal), (medium 60px 600), (large 80px 800);
+// @each $size in $sizes {
+//   .box-size {
+//     font-size: $size;
+//   }
+// }
+// $breakpoints: sm 576px, md 768px, lg 992px, xl 1200px, xxl 1400px;
+// $displayList: none block inline-block flex inline-flex table list-item;
+// @mixin display($name: "") {
+//   @each $display in $displayList {
+//     $prefix: "";
+//     @if $name != "" {
+//       $prefix: $name + "-";
+//     }
+//     $selector: ".d-" + $prefix + $display;
+//     #{$selector} {
+//       display: $display;
+//     }
+//   }
+// }
+// @include display;
+// @each $name, $value in $breakpoints {
+//   @media screen and (min-width: #{$value}) {
+//     @include display($name);
+//   }
+// }
+
+//map
+// $sizes: (
+//   //key: value
+//   small: 40px,
+//   medium: 60px,
+//   large: 80px
+// );
+// @each $name, $value in $sizes {
+//   .box-#{$name} {
+//     font-size: $value;
+//   } 
+// }
+
+//use
+// @use "components/section01";
+// @use "components/section02" as _section02;
+// .box {
+//   background: _section02.$primaryColor;
+//   // @include _section02._center;//err
+// }

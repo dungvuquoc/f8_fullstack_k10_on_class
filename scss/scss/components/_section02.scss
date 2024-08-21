@@ -1,0 +1,10 @@
+$primaryColor: blue;
+$_fontSize: 18px;
+@mixin _center {
+  width: 1200px;
+  margin: 0 auto;
+}
+.section-2 {
+  background: $primaryColor;
+  @include _center;
+}
